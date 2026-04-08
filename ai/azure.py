@@ -11,6 +11,8 @@ class AzureAIClient:
             'api_version': config["AI"]["VERSION"]
         }
 
+        print(self.open_ai_config)
+
         self.client = AzureOpenAI(**self.open_ai_config)
 
     def generate_image(self, prompt) -> str:
